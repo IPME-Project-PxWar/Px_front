@@ -11,9 +11,9 @@ export class PixelFillDirective {
     ) { }
 
     @HostListener('mouseenter') onHover(){
-        if(this._pixelService.clicked){
+       /* if(this._pixelService.clicked){
             this._elementRef.nativeElement.style['background-color'] = `rgba( ${this._pixelService.currentColor.red}, ${this._pixelService.currentColor.green}, ${this._pixelService.currentColor.blue}, 0.75)`;
-        }
+        }*/
     }
     
     @HostListener('mousedown') onMouseDown(){

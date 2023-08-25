@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Pixel, Color } from '../pixel/pixel';
+import { Pixel } from '../pixel/pixel';
+import { Color } from '../color-scheme/color-scheme';
 
 @Injectable({providedIn: 'root'})
 

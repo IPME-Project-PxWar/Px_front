@@ -1,15 +1,12 @@
- /* modèle pour le pixel */
- export class Pixel {
-    id: number;
-    x: number;
-    y: number;
-    color: Color;
-    modifiedAt: Date;
-    modifiedBy: string;
- }
+import { Color } from '../color-scheme/color-scheme'
 
- export class Color {
-    red: number;
-    green: number;
-    blue: number;
+ /* modèle pour le pixel */
+export class Pixel {
+   id: number;
+   x: number;
+   y: number;
+   color: Color;
+   modifiedAt: Date;
+   modifiedBy: string;
 }
+
