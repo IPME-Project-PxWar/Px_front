@@ -17,11 +17,12 @@ export class PixelFillDirective {
     }
     
     @HostListener('mousedown') onMouseDown(){
-        this._elementRef.nativeElement.style['background-color'] = `rgba( ${this._pixelService.currentColor.red}, ${this._pixelService.currentColor.green}, ${this._pixelService.currentColor.blue}, 1)`;
         this._pixelService.clicked = true;
     }
 
     @HostListener('mouseup') onMouseUp(){
+        /* @TODO remplacer par l'affichage de la palette pour la sélection et validation du changement de couleur du pixel */
+        this._elementRef.nativeElement.style['background-color'] = `rgba( ${this._pixelService.currentColor.red}, ${this._pixelService.currentColor.green}, ${this._pixelService.currentColor.blue}, 1)`;
         this._pixelService.clicked = false;
     }
 
