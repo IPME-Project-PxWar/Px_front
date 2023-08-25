@@ -1,0 +1,23 @@
+ <!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center" class="content">
+    <div class="title">
+        <h1>
+        {{ appTitle }}
+        </h1>
+    </div>
+    <div class="logo">
+        <img src="../assets/images/logo_pxwar.png" alt="Pixel war logo">
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <pixel-grid></pixel-grid>
+    </div>
+    <br/>
+    <div class="row justify-content-center">
+        <div class="controls">
+            <button class="btn btn-outline-secondary" (click)="onClearGrid()">Effacer la grille</button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

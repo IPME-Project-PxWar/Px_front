@@ -1,0 +1,7 @@
+<div class="grid" [ngStyle]="{'height.px': PIXEL_SIZE*height, 'width.px': PIXEL_SIZE*width}">
+    <ng-container *ngFor="let pixelRow of pixelGrid">
+        <ng-container *ngFor="let pixel of pixelRow">
+            <div class="pixel" [ngStyle]="{'height.px': PIXEL_SIZE, 'width.px': PIXEL_SIZE}" pixelFill></div>
+        </ng-container>
+    </ng-container>
+  </div>
