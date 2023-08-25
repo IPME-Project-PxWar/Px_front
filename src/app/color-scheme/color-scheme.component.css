@@ -1,0 +1,11 @@
+.colorbox{
+    border: 1px solid black;
+    display: inline-block;
+    float: left;
+    border-color: rgb( 50, 50, 50);
+    box-sizing: border-box;
+}
+.selectedColorBox{
+    color: rgb(130, 130, 180);
+    mix-blend-mode: exclusion;
+}

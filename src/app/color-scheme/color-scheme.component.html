@@ -1,0 +1,9 @@
+<div>
+    <ng-container *ngFor="let color of colors">
+        <div class="colorbox" 
+        [ngStyle]="{'height.px': COLOR_BOX_SIZE, 'width.px': COLOR_BOX_SIZE, 'backgroundColor':rgb(color.red , color.green , color.blue)}" 
+        (click)="selectColor( color )"> 
+            <p class="selectedColorBox" *ngIf="color===selectedColor" class="text-center font-weight-bold" [ngStyle]="{'color':rgb(255-color.red , 255-color.green , 255-color.blue)}">X</p> 
+        </div>
+    </ng-container>
+</div>

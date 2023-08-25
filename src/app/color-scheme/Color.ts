@@ -4,4 +4,3 @@ export class Color {
     green: number;
     blue: number;
 }
-

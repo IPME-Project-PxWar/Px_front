@@ -8,36 +8,36 @@ import { PixelService } from '../pixel/pixel.service';
     templateUrl: `./grid.component.html`,
     styleUrls: [`./grid.component.css`]
   })
-  export class GridComponent implements OnInit {
-    readonly PIXEL_SIZE = 20;
-    width: number = 60;
-    height: number = 40;
-    createdAt: Date;
-    pixelGrid: Array<Array<any>>;
+export class GridComponent implements OnInit {
+  readonly PIXEL_SIZE = 20;
+  width: number = 60;
+  height: number = 40;
+  createdAt: Date;
+  pixelGrid: Array<Array<any>>;
 
-    @ViewChildren(PixelFillDirective)
-    pixelsRef: QueryList<PixelFillDirective>;
+  @ViewChildren(PixelFillDirective)
+  pixelsRef: QueryList<PixelFillDirective>;
 
-    constructor(
-        private pixelService: PixelService
-      ) { }
+  constructor(
+      private pixelService: PixelService
+    ) { }
 
-    ngOnInit(): void {
-        this.pixelGrid = new Array(this.height);
-        for(let i = 0; i < this.height; i++) {
-            this.pixelGrid[i] = new Array(this.width).fill(0);
-        }
-    }
-
-    clearPixels(){
-        this.pixelsRef.forEach( pixel => {
-          pixel.clearPixel();
-        });
-    }
-
-    @HostListener('mouseleave')
-    onMouseLeave(){
-      this.pixelService.clicked = false;
-    }
-
+  ngOnInit(): void {
+      this.pixelGrid = new Array(this.height);
+      for(let i = 0; i < this.height; i++) {
+          this.pixelGrid[i] = new Array(this.width).fill(0);
+      }
   }
+
+  clearPixels(){
+      this.pixelsRef.forEach( pixel => {
+        pixel.clearPixel();
+      });
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave(){
+    this.pixelService.clicked = false;
+  }
+
+}

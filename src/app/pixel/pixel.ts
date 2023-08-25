@@ -1,4 +1,4 @@
-import { Color } from '../color-scheme/color-scheme'
+import { Color } from '../color-scheme/Color'
 
  /* modèle pour le pixel */
 export class Pixel {
